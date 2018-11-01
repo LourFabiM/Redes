@@ -1,0 +1,11 @@
+IP: 127.0.0.1 Puerto: 43376 Data: probando lab 0
+IP: 127.0.0.1 Puerto: 54582 Data: de nuevo
+IP: 127.0.0.1 Puerto: 57884 Data: vuelvo a probar
+IP: 127.0.0.1 Puerto: 43550 Data: una vez mas 957845123
+IP: 127.0.0.1 Puerto: 50266 Data: probando con puerto 5005
+IP: 127.0.0.1 Puerto: 51665 Data: hvcfchkg
+IP: 127.0.0.1 Puerto: 39396 Data: eifISOWKG
+IP: 127.0.0.1 Puerto: 35719 Data: hola
+IP: 127.0.0.1 Puerto: 56957 Data: BHSFiljwNsd
+IP: 127.0.0.1 Puerto: 38309 Data: hola Lour
+IP: 127.0.0.1 Puerto: 55318 Data: hola facu
