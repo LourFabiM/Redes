@@ -1,3 +1,4 @@
+
 from select import select
 import socket
 import sys, argparse
@@ -25,13 +26,13 @@ while True:
 
 	clientSocket.send('list'.encode())
 	filesInServer = clientSocket.recv(4096).decode().split(',')
-	filesInClient = listdir("./")
+	filesInClient = listdir("./recibido")
 	device, output, error = select(devices,[],[],60)
 	if not device:
 		print("Tiempo de espera excedido, se terminara la conexion ...")
 		clientSocket.send("close\n".encode())
 		clientSocket.close()
-		break
+		sys.exit()
 
 	if sys.stdin in device :
 		msgClient = sys.stdin.readline().rstrip("\n")
@@ -41,7 +42,7 @@ while True:
 			clientSocket.send(msgClient.encode())
 			clientSocket.close()
 			print("Conexion finalizada. ")
-			break
+			sys.exit()
 
 		elif msgClient.lower() == 'list':
 			for file in filesInServer:

@@ -30,14 +30,14 @@ while True:
             break
 
         if msgClient.lower() == 'list':
-            a=connectionSocket.send(",".join(listdir("/tmp")).encode('utf-8'))
+            a=connectionSocket.send(",".join(listdir(".")).encode('utf-8'))
 
 
         if msgClient[0:4].lower() == 'get ':
             filename = msgClient[4:]
-            print('Enviando ...  ',filename)
+            sys.stdout.write('Enviando ...  ' + filename + '\n'); sys.stdout.flush()
             with open(filename,'rb') as fileopen:
                 data = fileopen.read()
                 #filesend = connectionSocket.sendfile(fileopen)
                 filesend = connectionSocket.send(data)
-                print(filesend,"bytes")
+                sys.stdout.write(str(filesend) + " bytes" + '\n'); sys.stdout.flush()
